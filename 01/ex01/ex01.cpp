@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ex01.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/11 13:34:51 by qsymond           #+#    #+#             */
-/*   Updated: 2020/11/11 13:46:35 by qsymond          ###   ########.fr       */
+/*   Created: 2020/11/11 13:46:37 by qsymond           #+#    #+#             */
+/*   Updated: 2020/11/11 13:51:09 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-#define PONY_HPP
 #include <iostream>
+#include <string>
 
-class Pony
-{
-public:
-	Pony();
-	~Pony();
-	void	function1();
-	void	function2();
-};
-
-#endif
+void	memoryLeak() {
+std::string		*panther = new std::string("String panther");
+std::cout << *panther << std::endl;
+delete panther;
+}
