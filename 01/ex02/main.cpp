@@ -5,33 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/11 13:40:58 by qsymond           #+#    #+#             */
-/*   Updated: 2020/11/11 15:32:29 by qsymond          ###   ########.fr       */
+/*   Created: 2020/11/11 15:43:02 by qsymond           #+#    #+#             */
+/*   Updated: 2020/11/11 16:38:36 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#include "ZombieEvent.hpp"
 
-void	ponyOnTheHeap()
+int	main(void)
 {
-	Pony	*pony = new Pony();
-	pony->function1();
-	pony->function2();
-	delete	pony;
-}
+	Zombie		*zombieRandom;
+	Zombie		*zombie;
+	ZombieEvent	zombieEvent;
 
-void	ponyOnTheStack()
-{
-	Pony pony;
-	pony.function1();
-	pony.function2();
-}
-
-int		main(void)
-{
-	std::cout << "Pony on the Heap" << std::endl;
-	ponyOnTheHeap();
-	std::cout << "Pony on the Stack" << std::endl;
-	ponyOnTheStack();
+	zombieRandom = zombieEvent.randomChump();
+	zombieRandom->announce();
+	delete(zombieRandom);
+	zombieEvent.setZombieType("Without head");
+	zombie = zombieEvent.newZombie("Dzhambot");
+	zombie->announce();
+	delete(zombie);
 	return (0);
 }
