@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:30 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/06 12:46:05 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:21:01 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,7 @@ int main(void)
 		Bureaucrat bureaucratLow = Bureaucrat("Jim", 200);
 		std::cout << bureaucratLow;
 	}
-	catch(Bureaucrat::GradeTooLowException)
-	{
-		std::cout << "Слишком низкий рейтинг!" << std::endl;
-	}
-	catch(Bureaucrat::GradeTooHighException)
-	{
-		std::cout << "Слишком высокий рейтинг!" << std::endl;
+	catch (std::exception & e) {
 	}
 
 	try
@@ -33,13 +27,7 @@ int main(void)
 		Bureaucrat bureaucratHigh = Bureaucrat("Jim1", 0);
 		std::cout << bureaucratHigh;
 	}
-	catch(Bureaucrat::GradeTooLowException)
-	{
-		std::cout << "Слишком низкий рейтинг!" << std::endl;
-	}
-	catch(Bureaucrat::GradeTooHighException)
-	{
-		std::cout << "Слишком высокий рейтинг!" << std::endl;
+	catch (std::exception & e) {
 	}
 
 	try
@@ -48,13 +36,7 @@ int main(void)
 		bureaucratmed1.decGrade();
 		std::cout << bureaucratmed1;
 	}
-	catch(Bureaucrat::GradeTooLowException)
-	{
-		std::cout << "Слишком низкий рейтинг!" << std::endl;
-	}
-	catch(Bureaucrat::GradeTooHighException)
-	{
-		std::cout << "Слишком высокий рейтинг!" << std::endl;
+	catch (std::exception & e) {
 	}
 
 	try
@@ -63,13 +45,7 @@ int main(void)
 		bureaucratmed2.incGrade();
 		std::cout << bureaucratmed2;
 	}
-	catch(Bureaucrat::GradeTooLowException)
-	{
-		std::cout << "Слишком низкий рейтинг!" << std::endl;
-	}
-	catch(Bureaucrat::GradeTooHighException)
-	{
-		std::cout << "Слишком высокий рейтинг!" << std::endl;
+	catch (std::exception & e) {
 	}
 
 	try
@@ -78,14 +54,7 @@ int main(void)
 		bureaucratmed3.incGrade();
 		std::cout << bureaucratmed3;
 	}
-	catch(Bureaucrat::GradeTooLowException)
-	{
-		std::cout << "Слишком низкий рейтинг!" << std::endl;
+	catch (std::exception & e) {
 	}
-	catch(Bureaucrat::GradeTooHighException)
-	{
-		std::cout << "Слишком высокий рейтинг!" << std::endl;
-	}
-
 	return (0);
 }

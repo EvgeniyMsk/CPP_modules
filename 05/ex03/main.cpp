@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:30 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/07 10:41:07 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:44:08 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,12 @@ int main(void)
 	try
 	{
 		Intern intern = Intern();
-		Form *form1 = intern.makeRobotomy("target");
-		Bureaucrat bur1 = Bureaucrat("Вася", 145);
-		std::cout << *form1 << std::endl;
+		Form *form1 = intern.makeForm("PresidentialPardonForm", "Bart");
+		Bureaucrat bur1 = Bureaucrat("Вася", 1);
 		bur1.signForm(*form1);
-		std::cout << *form1 << std::endl;
 		bur1.executeForm(*form1);
 	}
-	catch(Form::GradeTooHighException){}
-	catch(Form::GradeTooLowException){}
-	catch(Form::FormIsNotSigned){}
-	catch(Bureaucrat::GradeTooHighException){}
-	catch(Bureaucrat::GradeTooLowException){}
-	catch(RobotomyRequestForm::RoboFail){}
+	catch (std::exception & e) {
+	}
 	return (0);
 }

@@ -29,7 +29,11 @@ Form *Intern::makeForm(std::string type, std::string target) {
 		};
 	for (int i = 0; i < 3; i++)
 		if (type == types[i])
+		{
+			std::cout << "Интеррн создал " << type << std::endl;
 			return(this->*func[i])(target);
+		}
+	std::cout << "Интерн не может создать " << type << " так как не умеет!" << std::endl;
 	return (nullptr);
 }
 

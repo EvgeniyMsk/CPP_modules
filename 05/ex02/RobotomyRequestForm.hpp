@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 22:53:25 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/06 23:05:21 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:23:17 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class RobotomyRequestForm : public Form
 	RobotomyRequestForm &operator=(RobotomyRequestForm const &shrubberyCreationForm);
 	virtual ~RobotomyRequestForm();
 	void execute(Bureaucrat const &executor) const;
+	class RoboFail : public std::exception {};
 };
 	std::ostream &operator<<(std::ostream &os, RobotomyRequestForm const &form);
 

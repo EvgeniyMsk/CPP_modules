@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:30 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/06 14:47:39 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:24:29 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,7 @@ int main(void)
 		bureaucrat.signForm(form);
 		std::cout << form << std::endl;
 	}
-	catch(Form::GradeTooHighException)
-	{
-		
-	}
-	catch(Form::GradeTooLowException)
-	{
-		
-	}
-	catch(Bureaucrat::GradeTooHighException)
-	{
-		
-	}
-	catch(Bureaucrat::GradeTooLowException)
-	{
-		
+	catch (std::exception & e) {
 	}
 	return (0);
 }

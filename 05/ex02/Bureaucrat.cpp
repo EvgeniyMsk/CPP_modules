@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:39 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/07 10:29:29 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:34:49 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,10 @@ int	Bureaucrat::getGrade() const
 void Bureaucrat::incGrade()
 {
 	if (grade - 1 < 1)
+	{
+		std::cout << "Уровень бюроктара слишком высокий!" << std::endl;
 		throw GradeTooHighException();
+	}
 	else
 		grade--;
 }
@@ -69,7 +72,10 @@ void Bureaucrat::incGrade()
 void Bureaucrat::decGrade()
 {
 	if (grade + 1 > 150)
+	{
+		std::cout << "Уровень бюроктара слишком низкий!" << std::endl;
 		throw GradeTooLowException();
+	}
 	else
 		grade++;
 }

@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:39 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/07 10:28:41 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:42:07 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,18 @@ void Bureaucrat::decGrade()
 
 void Bureaucrat::signForm(Form &form)
 {
-	form.beSigned(*this);
+	if (&form != nullptr)
+		form.beSigned(*this);
+	else
+		std::cout << "Попытка обработать несуществующую форму!" << std::endl;
 }
 
 void Bureaucrat::executeForm(Form const &form)
 {
-	form.execute(*this);
+	if (&form != nullptr)
+		form.execute(*this);
+	else
+		std::cout << "Попытка обработать несуществующую форму!" << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &bureaucrat)

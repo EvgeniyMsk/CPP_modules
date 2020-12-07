@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:34 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/06 12:34:58 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:21:20 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ public:
 	class GradeTooHighException : public std::exception {};
 	class GradeTooLowException : public std::exception {};
 };
-std::ostream &operator<<(std::ostream &os, Bureaucrat const &bureaucrat);
+	std::ostream &operator<<(std::ostream &os, Bureaucrat const &bureaucrat);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 22:53:17 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/07 10:19:43 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:23:20 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,19 +46,21 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	while (i < 100)
 	{
 		if (i > rand() % 100 && rand() % 100 < 50)
-			throw std::string("robotomized fail");
+			{
+				std::cout << "It is robofail, baby!" << std::endl;
+				throw RoboFail();
+			}
 		std::cout << i << "%: vzh vzh vzh vzh vzh vzh vzh vzh..." << std::endl;
 		if (i >= 50)
 			break;
 		i += 10;
 	}
-	std::cout << Form::getTarget() << "  has been robotomized successfully!"
-									<< std::endl;
+	std::cout << Form::getTarget() << "  has been robotomized successfully!" << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &os, RobotomyRequestForm const &form)
 {
-	os << "Name: " << form.getName() << std::endl 
+os << "Name: " << form.getName() << std::endl 
 	<< "Is signed: " << form.getIsSigned() << std::endl 
 	<< "Grade to sign: " << form.getGradeToSign() << std::endl
 	<< "Grade to execute: " << form.getGradeToExecute() << std::endl
