@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:34 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/06 22:52:33 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 18:58:18 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ public:
 	void incGrade();
 	void decGrade();
 	void signForm(Form &form);
-	class GradeTooHighException : public std::exception {};
-	class GradeTooLowException : public std::exception {};
+	class GradeTooHighException : public std::exception { public: GradeTooHighException(); };
+	class GradeTooLowException : public std::exception { public: GradeTooLowException(); };
+	class OtherException : public std::exception { public: OtherException(std::string const &reason); };
 	void executeForm(Form const &form);
 };
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &bureaucrat);

@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:30 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/07 13:24:49 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 19:15:43 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 	try
 	{
 		RobotomyRequestForm form1 = RobotomyRequestForm("target");
-		Bureaucrat bur1 = Bureaucrat("Вася", 2);
+		Bureaucrat bur1 = Bureaucrat("Вася", 149);
 		std::cout << form1 << std::endl;
 		bur1.signForm(form1);
 		std::cout << form1 << std::endl;

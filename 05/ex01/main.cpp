@@ -6,7 +6,7 @@
 /*   By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 12:31:30 by qsymond           #+#    #+#             */
-/*   Updated: 2020/12/07 13:24:29 by qsymond          ###   ########.fr       */
+/*   Updated: 2020/12/07 19:15:08 by qsymond          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(void)
 	try
 	{
 		Form form = Form("Форма_1", 10, 10);
-		Bureaucrat bureaucrat = Bureaucrat("Вася", 100);
+		Bureaucrat bureaucrat = Bureaucrat("Вася", 10);
 		std::cout << form << std::endl;
 		std::cout << bureaucrat << std::endl;
 		bureaucrat.signForm(form);
