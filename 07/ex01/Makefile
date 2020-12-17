@@ -6,7 +6,7 @@
 #    By: qsymond <qsymond@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/16 13:09:26 by qsymond           #+#    #+#              #
-#    Updated: 2020/12/17 10:47:03 by qsymond          ###   ########.fr        #
+#    Updated: 2020/12/17 15:30:31 by qsymond          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXX				= clang++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I.
 
-NAME			= ex00
+NAME			= ex01
 
 all:			$(NAME)
 
